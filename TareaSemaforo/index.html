@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    
+      <div class="semaforo">
+        <div class="luz rojo"></div>
+        <div class="luz amarillo"></div>
+        <div class="luz verde"></div>
+      </div>
+</body>
+
+  <script>
+    function cambiarSemaforo() {
+      var rojo = document.querySelector(".rojo");
+      var amarillo = document.querySelector(".amarillo");
+      var verde = document.querySelector(".verde");
+  
+      setTimeout(function() {
+        rojo.style.backgroundColor = "red";
+        amarillo.style.backgroundColor = "rgba(255, 255, 0, 0.503)";
+        verde.style.backgroundColor = "rgba(5, 186, 5, 0.501)";
+      }, 1000);
+  
+      setTimeout(function() {
+        rojo.style.backgroundColor = "rgba(255, 0, 0, 0.537)";
+        amarillo.style.backgroundColor = "yellow";
+        verde.style.backgroundColor = "rgba(5, 186, 5, 0.501)";
+      }, 2000);
+  
+      setTimeout(function() {
+        rojo.style.backgroundColor = "rgba(255, 0, 0, 0.537)";
+        amarillo.style.backgroundColor = "rgba(255, 255, 0, 0.503)";
+        verde.style.backgroundColor = "rgb(5, 186, 5)";
+      }, 3000);
+    }
+  
+    setInterval(cambiarSemaforo, 3000); // Repetir el ciclo cada 3 segundos
+  </script>
+
+  
+</html>
